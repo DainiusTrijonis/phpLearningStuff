@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegistrationForm3</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <main id="container">
+        <div id="titleContainer">
+            <h1>Student Registration Form</h1>
+            <div class="titleDesc">
+                Fill out form carefully for registration
+            </div>
+            <div id="infoContainers">
+                <div class="text">Student Name</div>
+                <div id="inputContainerList">
+                    <div id="nameInputContainer">
+                        <input class="input" type="text">
+                        <div class="opacityText">First name</div>
+                    </div>
+                    <div id="nameInputContainer">
+                        <input class="input" type="text">
+                        <div class="opacityText">Middle name</div>
+                    </div>
+                    <div id="nameInputContainer">
+                        <input class="input" type="text">
+                        <div class="opacityText">Last name</div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div id="infoContainers">
+
+                <div style="float: left; ">
+                    <div class="text">Birth Date</div>
+                    <div id="inputContainerList">
+                        <div id="brthGenderRow">
+                            <select class="select" id="month" name="month">
+                                <option value="" selected disabled hidden></option>
+                                <option value="january">January</option>
+                                <option value="february">February</option>
+                                <option value="may">May</option>
+                            </select>
+                            <div class="opacityText">Month</div>
+                        </div>
+                        <div id="brthGenderRow">
+                            <select class="select" id="day" name="day">
+                                <option value="" selected disabled hidden></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                            <div class="opacityText">Day</div>
+                        </div>
+                        <div id="brthGenderRow">
+                            <select class="select" id="year" name="year">
+                                <option value="" selected disabled hidden></option>
+                                <option value="1998">1998</option>
+                                <option value="1999">1999</option>
+                                <option value="2000">2000</option>
+                            </select>
+                            <div class="opacityText">Year</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div style="float: right; ">
+                    <div class="text">Gender</div>
+                    <div id="inputContainerList">
+                        <select class="genderSelect" id="month" name="month">
+                            <option value="" selected disabled hidden></option>
+                            <option value="helicopter">Helicopter</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- clearing float -->
+            <div style="clear: both;"></div>
+
+            <div id="infoContainers">
+                <div class="text">Address</div>
+                <div id="inputContainerList">
+                    <div style="max-width: 100%; overflow: hidden;">
+                        <input class="inputFull" type="text">
+                        <div class="opacityText">Street Address</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="infoContainers">
+                <div id="inputContainerList">
+                    <div style="max-width: 100%;">
+                        <input class="inputFull" type="text">
+                        <div class="opacityText">Street Address Line 2</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="infoContainers">
+                <div style="float: left; max-width: 45%; ">
+                    <input class="inputSideBySide" type="text">
+                    <div class="opacityText">City</div>
+                </div>
+                <div style="float: right; max-width: 45%; ">
+                    <input class="inputSideBySide" type="text">
+                    <div class="opacityText">State/Province</div>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </main>
+</body>
+
+</html>

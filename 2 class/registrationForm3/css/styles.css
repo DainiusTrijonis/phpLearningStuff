@@ -1,0 +1,84 @@
+body {
+    background: url("../data/brushsteel2.webp") no-repeat center center fixed;
+    background-size: cover;
+}
+
+#container{
+    width: 600px;
+    height: 700px;
+    margin-top: 24px;
+    margin-left: calc((100% - 600px)/2);
+    /* background-color: aliceblue; */
+    padding: 32px;
+}
+
+
+#infoContainers {
+    padding-top: 32px;
+    
+}
+
+
+#inputContainerList > * {
+    display: inline-block;
+}
+
+
+#nameInputContainer:not(:last-child){
+    margin-right: 17px;
+}
+#brthGenderRow:not(:last-child){
+    margin-right: 5px;
+}
+
+
+/* for changing font overall */
+.text,.opacityText,.titleDesc{
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.opacityText{ 
+    font-size: 12px;
+    opacity: 0.3;
+}
+
+.titleDesc{
+    font-size: 16px;
+    opacity: 0.5;
+}
+
+
+.input,.inputFull, .inputSideBySide { 
+    all: unset;
+    background-color: white;
+    border-radius: 5%;
+    padding: 1px;
+}
+.inputFull{
+    width: 100vw;
+    max-width: fill-available;
+    max-width: stretch;
+    max-width: -webkit-fill-available;
+    max-width: -moz-available;   
+}
+.inputSideBySide{
+    width: 100vw;
+    max-width: fill-available;
+    max-width: stretch;
+    max-width: -webkit-fill-available;
+    max-width: -moz-available; 
+}
+
+.select,.genderSelect {
+    width: 90px;
+    height: 20px;
+    border: 0;
+    background-color: white;
+    border-radius: 5%;
+    
+}
+.genderSelect {
+    width: 200px;
+}
+
