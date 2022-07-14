@@ -1,14 +1,16 @@
 body {
-    background: url("../data/brushsteel2.webp") no-repeat center center fixed;
+    background-color:cornsilk;
     background-size: cover;
 }
 
 #container{
     width: 600px;
-    height: 700px;
     margin-top: 24px;
     margin-left: calc((100% - 600px)/2);
     /* background-color: aliceblue; */
+    background: url("../data/brushsteel2.webp") no-repeat center center fixed;
+    background-size: cover;
+    border-radius: 3%;
     padding: 32px;
 }
 

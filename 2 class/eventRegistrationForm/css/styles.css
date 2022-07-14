@@ -1,0 +1,63 @@
+body {
+    background-size: cover;
+}
+
+#container{
+    width: 80%;
+    margin-left: calc((100% - 80%)/2);
+    background: url("../data//bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-size: cover;
+    border-radius: 3%;
+    padding: 3%;
+}
+
+
+.text {
+    padding-bottom: 3%;
+}
+
+.infoContainer  { 
+    padding-bottom: 3%;
+    display: flex;
+}
+
+.header > *{
+    padding-bottom: 3%;
+    display: inline-block;
+}
+
+.infoInline  > * { 
+    padding-bottom: 13px;
+}
+
+.leftLine {
+    float: left;
+    width: 45%;
+}
+.rightLine {
+    float: right;
+    width: 45%;
+}
+
+label {
+    font-size: 12px;
+}
+
+input[type=text] {
+    all: unset;
+    font-size: 10px;
+    border-bottom: 1px solid grey;
+    width: 100%;
+}
+
+.dots {
+    margin: auto;
+    text-align: center;
+    line-height: 8.5px;
+
+}
+
+p.opacityText {
+    opacity: 0.2;
+}
