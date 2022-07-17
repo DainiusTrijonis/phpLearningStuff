@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hello world
+</body>
+
+<script>
+    //const name = "Dainius", surname = "Trijonis", birthDate = 1998, thisYear = 2022;
+    const [name,surname,birthData,thisYear] = ["JON","SMITH", 1998, 2022];
+    console.log(`As esu ${name} ${surname}. Man yra ${thisYear-birthData} `);
+
+    const task2 = () => {
+        const [x1,x2] = [Math.floor(Math.random()*5),Math.floor(Math.random()*5)];
+        const x3 = (x1 != 0 && x2 != 0 ? (x1>x2 ? x1/x2 : x2/x1): 0)
+        return Math.round(x3 * 100) / 100
+    }
+    console.log(task2())
+
+    const task3 = () => {
+        const [x1,x2,x3] = [Math.floor(Math.random()*26),Math.floor(Math.random()*26),Math.floor(Math.random()*26)];
+        console.log(x1,x2,x3)
+        return  (x1==x2 && x2==x3) ? "All equal":
+                (x1>=x2 && x1>=x3) ? x2 >= x3 ? x2:x3:
+                (x2>=x3 && x2>=x1) ? x3 >= x1 ? x3:x1:
+                (x1>=x2) ? x1:x2
+    }
+    console.log(task3())
+
+    const task4 = () => {
+        const [a,b,c] = [Math.floor(Math.random()*(11) + 1),Math.floor(Math.random()*11 + 1),Math.floor(Math.random()*11 + 1)];
+        console.log(a,b,c);
+        return (a + b > c) && (a + c > b) && (b + c > a) ? true:false;
+    }
+    console.log("Can triangle exist? "+task4());
+
+    const task5 = () => {
+        const [x1,x2,x3,x4] = 
+            [   Math.floor(Math.random()* 3),
+                Math.floor(Math.random()* 3),
+                Math.floor(Math.random()* 3),
+                Math.floor(Math.random()* 3 )];
+        console.log("Generated numbers = ",x1,x2,x3,x4);
+        let [sum0,sum1,sum2] = [0,0,0];
+        if(x1 === 1) sum1++;
+        if(x2 === 1) sum1++;
+        if(x3 === 1) sum1++;
+        if(x4 === 1) sum1++;
+        if(x1 === 2) sum2++;
+        if(x2 === 2) sum2++;
+        if(x3 === 2) sum2++;
+        if(x4 === 2) sum2++;
+        if(x1 === 0) sum0++;
+        if(x2 === 0) sum0++;
+        if(x3 === 0) sum0++;
+        if(x4 === 0) sum0++;
+
+        console.log(`sum0 = ${sum0} sum1 = ${sum1} sum2 = ${sum2}`)
+    }
+    task5();
+
+    const task6 = () => {
+        const [x1,x2,x3] = [
+            Math.floor(Math.random() * 11) * (Math.round(Math.random()) ? 1 : -1),
+            Math.floor(Math.random() * 11) * (Math.round(Math.random()) ? 1 : -1),
+            Math.floor(Math.random() * 11) * (Math.round(Math.random()) ? 1 : -1)
+        ];
+        console.log(`
+            x1 = ${x1<0 ? `[${x1}]`:`(${x1})`} 
+            x2 = ${x2<0 ? `[${x2}]`:`(${x2})`} 
+            x3 = ${x3<0 ? `[${x3}]`:`(${x3})`}
+        `);
+
+
+    }
+    task6();
+    const task7 = () => {
+        const candles = Math.floor(Math.random() * (3001 - 5 + 1) + 5);
+        console.log(candles);
+        const sum = candles > 2000 ? candles * (1-0.04): candles>1000? candles * (1-0.03) : candles ;
+        console.log("nuolaida = ",sum);
+    }
+    task7();
+
+    const task8 = () => {
+        const [x1,x2,x3] = [
+            Math.floor(Math.random()* 101),
+            Math.floor(Math.random()* 101),
+            Math.floor(Math.random()* 101)
+        ];
+        console.log(x1,x2,x3);
+        const sum = x1+x2+x3;
+        const sum1 = x1+x2+x3 == 0 ? 0: (x1+x2+x3)/3 ; 
+        let sum2 = sum;
+        if(sum2!==0) {
+            if(x1>=90 || x1<=10) sum2 = sum2 - x1;
+            if(x2>=90 || x2<=10) sum2 = sum2 - x2;
+            if(x3>=90 || x3<=10) sum2 = sum2 - x3;
+            if(sum2 > 0) sum2 = sum2/3;
+        }
+
+        console.log(sum1);
+        console.log(sum2);
+
+    }
+    task8();
+
+    const task9 = () => {
+        console.log("task9");
+        const [h,min,s,addS] = [
+            Math.floor(Math.random() * (24) + 1),
+            Math.floor(Math.random() * (60) + 1),
+            Math.floor(Math.random() * (60) + 1),
+            Math.floor(Math.random() * (300))
+        ]
+        console.log(`${h}:${min}:${s}`);
+        console.log(`Added secs - ${addS}s`);
+
+        let [h2,min2,s2] = [h,min,s+addS];
+        if(s2 >= 60) {
+            min2 = min2 + Math.floor(((s2) / 60));
+            s2 = s2 - Math.floor(((s2)/60)) * 60;
+            if(min2>=60) {
+                h2 = h2 + Math.floor(((min2) / 60));
+                min2 = min2 - Math.floor(((min2)/60)) * 60;
+                if(h2>=25) {
+                    h2 = h2 - Math.floor(((h2)/24)) * 24;
+                }
+            }
+        }
+        console.log(`Final time`);
+        console.log(`${h2}:${min2}:${s2}`);
+    }
+    task9();
+
+</script>
+</html>
+
+<!-- 
+    Papildomas.
+    Padarykite skaitmeninį laikrodį, rodantį valandas, minutes ir sekundes.
+    Valandom, minutėm ir sekundėm sugeneruoti panaudokite funkciją Math.random().
+    Sugeneruokite skaičių nuo 0 iki 300  (sveiki skaičiai). 
+    Tai papildomos sekundės. Skaičių pridėkite prie jau sugeneruoto laiko. 
+    Atspausdinkite laikrodį prieš ir po sekundžių pridėjimo ir 
+    pridedamų sekundžių skaičių. 
+-->
