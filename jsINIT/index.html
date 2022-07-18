@@ -71,14 +71,15 @@
             Math.floor(Math.random() * 11) * (Math.round(Math.random()) ? 1 : -1)
         ];
         console.log(`
-            x1 = ${x1<0 ? `[${x1}]`:`(${x1})`} 
-            x2 = ${x2<0 ? `[${x2}]`:`(${x2})`} 
-            x3 = ${x3<0 ? `[${x3}]`:`(${x3})`}
+            x1 = ${x1<0 ? `[${x1}]`: x1==0 ? `(${x1})` : `{${x1}}`} 
+            x2 = ${x2<0 ? `[${x2}]`: x2==0 ? `(${x2})` : `{${x2}}`} 
+            x3 = ${x3<0 ? `[${x3}]`: x3==0 ? `(${x3})` : `{${x3}}`}
         `);
 
 
     }
     task6();
+
     const task7 = () => {
         const candles = Math.floor(Math.random() * (3001 - 5 + 1) + 5);
         console.log(candles);
@@ -89,9 +90,9 @@
 
     const task8 = () => {
         const [x1,x2,x3] = [
-            Math.floor(Math.random()* 101),
-            Math.floor(Math.random()* 101),
-            Math.floor(Math.random()* 101)
+            Math.floor(Math.random() * 101),
+            Math.floor(Math.random() * 101),
+            Math.floor(Math.random() * 101)
         ];
         console.log(x1,x2,x3);
         const sum = x1+x2+x3;
@@ -134,19 +135,14 @@
             }
         }
         console.log(`Final time`);
-        console.log(`${h2}:${min2}:${s2}`);
+        console.log(`
+            ${
+                h2 >= 10 ? `${h2}`:`0${h2}`}:${
+                min2 >= 10 ? `${min2}`:`0${min2}`}:${
+                s2 >= 10 && s2!=0 ? `${s2}`:`0${s2}`}
+        `);
     }
     task9();
 
 </script>
 </html>
-
-<!-- 
-    Papildomas.
-    Padarykite skaitmeninį laikrodį, rodantį valandas, minutes ir sekundes.
-    Valandom, minutėm ir sekundėm sugeneruoti panaudokite funkciją Math.random().
-    Sugeneruokite skaičių nuo 0 iki 300  (sveiki skaičiai). 
-    Tai papildomos sekundės. Skaičių pridėkite prie jau sugeneruoto laiko. 
-    Atspausdinkite laikrodį prieš ir po sekundžių pridėjimo ir 
-    pridedamų sekundžių skaičių. 
--->
