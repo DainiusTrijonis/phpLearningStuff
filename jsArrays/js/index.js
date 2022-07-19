@@ -248,7 +248,7 @@ const task9 = () => {
             !unique ? array.push(value): null
         }
     }
-    console.log(array.join(','));
+    console.log(array.join(' '));
     
 
     const isPrime = num => {
@@ -263,7 +263,15 @@ const task9 = () => {
             return value;
         }
     }).sort((a, b) => a - b);
-    console.log(array2.join(','));
-    // Sugeneruokite stringą, kurį sudarytų 50 atsitiktinių skaičių nuo 1 iki 200, atskirtų tarpais. Skaičiai turi būti unikalūs (t.y. nesikartoti). Sugeneruokite antrą stringą, pasinaudodami pirmu, palikdami jame tik pirminius skaičius (t.y tokius, kurie dalinasi be liekanos tik iš 1 ir patys savęs). Skaičius stringe sudėliokite didėjimo tvarka, nuo mažiausio iki didžiausio. (reikės split() funkcijos ir masyvų.)
+    console.log(array2.join(' '));
+
+    // Sugeneruokite stringą, kurį sudarytų 50 atsitiktinių
+    // skaičių nuo 1 iki 200, atskirtų tarpais. 
+    // Skaičiai turi būti unikalūs (t.y. nesikartoti). 
+    // Sugeneruokite antrą stringą, pasinaudodami pirmu, 
+    // palikdami jame tik pirminius skaičius 
+    // (t.y tokius, kurie dalinasi be liekanos tik iš 1 ir patys savęs). 
+    // Skaičius stringe sudėliokite didėjimo tvarka, nuo mažiausio iki didžiausio. 
+    // (reikės split() funkcijos ir masyvų.)
 }
 //task9();

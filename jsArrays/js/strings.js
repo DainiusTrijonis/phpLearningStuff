@@ -136,4 +136,4 @@ const stask10 = () => {
     }
     console.log(sentence);
 }
-stask10();
+//stask10();
