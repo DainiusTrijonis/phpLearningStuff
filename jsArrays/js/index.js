@@ -22,7 +22,7 @@ const task1 = () => {
 //task1();
 
 const task2 = () => {
-    let array = Array.from(Array(88).keys())
+    let array = Array.from(Array(3000).keys())
     let [str1,str2] = ['',''];
 
     for(let i=0; i<array.length; i++) {
@@ -266,4 +266,4 @@ const task9 = () => {
     console.log(array2.join(','));
     // Sugeneruokite stringą, kurį sudarytų 50 atsitiktinių skaičių nuo 1 iki 200, atskirtų tarpais. Skaičiai turi būti unikalūs (t.y. nesikartoti). Sugeneruokite antrą stringą, pasinaudodami pirmu, palikdami jame tik pirminius skaičius (t.y tokius, kurie dalinasi be liekanos tik iš 1 ir patys savęs). Skaičius stringe sudėliokite didėjimo tvarka, nuo mažiausio iki didžiausio. (reikės split() funkcijos ir masyvų.)
 }
-task9();
+//task9();
