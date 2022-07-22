@@ -15,6 +15,8 @@ const func3 = (id) => {
         for(let j = 1; j<=num; j++) {
             if(func1(i, j) === num) {
                 result += `${i}^${j} = ${num}<br>`;
+            } else if(func1(i, j) > num) {
+                break;
             }
         }
     }
