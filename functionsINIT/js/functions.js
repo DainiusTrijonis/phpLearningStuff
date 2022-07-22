@@ -203,19 +203,43 @@ function averageOfArrayOfArrays(array) {
         array.push(generateRandomArray(1,10,10));
     }
     console.log(array);
-    
     let [average,lowest,row,col] = averageOfArrayOfArrays(array);
+
+    while(average < 70) {
+        array[row][col] += 3;
+        [average,lowest,row,col] = averageOfArrayOfArrays(array);
+    }
+    console.log(array);
     console.log(average,lowest,row,col);
 
-    
 
-   while(average < 70) {
-        console.log(lowest);
-       array[row][col] += 3;
-       [average,lowest,row,col] = averageOfArrayOfArrays(array);
-   }
-    console.log(array);
-    //console.log(average,lowest,row,col);
+    return array;
 }
-task10();
+//task10();
+
+/*
+    Sugeneruokite masyvą, kurio ilgis atsitiktinai kinta nuo 10 iki 100. 
+    Masyvo reikšmes sudaro atsitiktiniai skaičiai 0-100 ir masyvai. 
+    Santykis skaičiuojamas atsitiktinai, 
+    bet taip, kad skaičiai sudarytų didesnę dalį nei masyvai. 
+    Reikšmių masyvų ilgis nuo 1 iki 5, o reikšmės analogiškos 
+    (nuo 50% iki 100% atsitiktiniai skaičiai 0-100, o likusios masyvai) 
+    ir t.t. kol visos galutinės reikšmės bus skaičiai ne masyvai. 
+    Suskaičiuoti kiek elementų turi masyvas. 
+    Suskaičiuoti masyvo elementų (tie kurie ne masyvai) sumą. 
+    Suskaičiuoti maksimalų masyvo gylį. 
+    Atvaizduokite masyvą grafiškai . 
+    Masyvą pavazduokite kaip 
+    div elementą, kuris yra display:flex, kurio viduje yra skaičiai. 
+    Kiekvienas div elementas turi savo unikalų id ir 
+    unikalią background spalvą (spalva pvz nepavaizduota). 
+    pvz: <div id=”M1”>10, 46, 67, 
+        <div id=”M2”> 89, 45, 89, 34, 90, 
+        <div id=”M3”> 84, 97 </div> 90, 56 </div> </div>
+*/
+
+const task11 = () => {
+    let array = generateRandomArray(0,100,Math.floor(Math.random() * (100 - 10 +1)) + 10);
+    
+}
 
